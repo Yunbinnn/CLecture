@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// stdio
 // 표준 입출력 헤더 파일
 
 void main()
@@ -132,19 +133,19 @@ void main()
 	printf("%d", a + b);
 
 	// 2. printf(       , 변수 + 리터럴 상수);
-	printf("%d", a + c);
+	printf("%d", a + 10);
 
 	// 3. printf(       , 변수 - 심볼릭 상수);
-	printf("%d", a - 20);
+	printf("%d", a - d);
 	 
-	// 4. printf(       , 리터럴 상수 - 심볼릭 상수);
-	printf("%d", c - 10);
+	// 4. printf(       , 리터럴 상수 * 심볼릭 상수);
+	printf("%d", 10 * c);
 	 
 	// 5. printf(       , 심볼릭 상수 / 심볼릭 상수);
-	printf("%d", 40 / 20);
+	printf("%d", c / d);
 	 
 	// 6. printf(       , 리터럴 상수 / 리터럴 상수);
-	printf("%d", c / d);
+	printf("%d", 40 / 20);
 
 #pragma endregion
 
