@@ -134,6 +134,7 @@
     <ClInclude Include="(2023.07.13) 상수.h" />
     <ClInclude Include="(2023.07.14) 비트와 바이트.h" />
     <ClInclude Include="(2023.07.17) 조건문.h" />
+    <ClInclude Include="(2023.07.18) 반복문.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
