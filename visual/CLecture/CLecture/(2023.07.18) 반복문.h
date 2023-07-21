@@ -5,7 +5,6 @@
 void main()
 {
 #pragma region switch문
-
 	// 어떤 결과에 따라 그 결과부터 실행되는
 	// 명령문입니다.
 
@@ -43,7 +42,6 @@ void main()
 #pragma endregion
 
 #pragma region 반복문
-
 	// 프로그램 내에서 특정한 작업을
 	// 반복적으로 수행하는 명령문입니다.
 
@@ -187,6 +185,5 @@ void main()
 	*/
 
 #pragma endregion
-
 
 }

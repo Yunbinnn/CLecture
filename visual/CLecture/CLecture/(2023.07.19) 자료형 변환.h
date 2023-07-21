@@ -6,7 +6,6 @@ void main()
 {
 
 #pragma region 자료형 변환
-
 	// 서로 다른 자료형을 가지고 있는 변수끼리
 	// 연산이 이루어질 때 지정했던 자료형을
 	// 다른 자료형으로 변환하는 과정입니다.
@@ -57,7 +56,6 @@ void main()
 #pragma endregion
 
 #pragma region continue문
-
 	// 해당 조건문만 실행하지 않고, 
 	// 반복문은 이어서 실행하는 제어문입니다.
 
@@ -74,7 +72,6 @@ void main()
 #pragma endregion
 
 #pragma region 시프트 연산자
-
 	// 비트 값을 주어진 숫자만큼 부호 방향으로
 	// 이동시키는 연산자입니다.
 

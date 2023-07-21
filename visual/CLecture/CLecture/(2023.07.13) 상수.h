@@ -57,7 +57,6 @@ void main()
 #pragma endregion
 
 #pragma region 변수의 이름 규칙
-
 		// 변수의 이름 규칙
 
 		// 1. 변수의 이름은 숫자로 시작할 수 없다.
@@ -85,7 +84,6 @@ void main()
 #pragma endregion
 
 #pragma region 변수의 초기화
-
 	// 최초로 변수에 값을 저장해주는 과정입니다.
 
 	// 4 byte 메모리 공간 생성
@@ -101,7 +99,6 @@ void main()
 #pragma endregion
 
 #pragma region 상수
-
 	// 프로그램이 실행되는 동안 더이상 변경할 수 없는
 	// 메모리 공간입니다.
 

@@ -5,7 +5,6 @@
 void main()
 {
 #pragma region 실수를 저장하는 방법
-
 	float pi = 3.5f;
 	double doubleData = 3.5;
 
