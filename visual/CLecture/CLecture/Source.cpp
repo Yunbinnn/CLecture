@@ -1,80 +1,112 @@
 #include <stdio.h>
 
+// 자료형 함수의 이름 (매개 변수)
+void Function()
+{
+	// 같은 이름의 함수를 선언할 수 없습니다.
+	printf("Function\n");
+}
+
+// 함수의 경우 자료형과 반환하는 값의 형태가
+// 일치하지 않으면 원하는 값을 얻을 수 없습니다.
+char CharFunction()
+{
+	return 'A';
+}
+
+#pragma region 매개 변수
+// 함수의 정의에서 전달받은 인수를 함수 내부로
+// 전달하기 위해 사용하는 변수입니다.
+
+void Calculator(int x)
+{
+	x = 450;
+
+	printf("x의 값 : %d\n", x);
+}
+
+// 참조에 의한 호출
+void Swap(int* x, int* y)
+{
+	int temp = 0;
+
+	temp = *x;
+	*x = *y;
+	*y = temp;
+
+}
+
+// 매개 변수는 함수 내부에서만 연산이 이루어지며,
+// 함수가 종료되면 메모리에서 사라지며, 여러개의
+// 매개 변수를 생성할 수 있습니다.
+
+#pragma endregion
+
 void main()
 {
 
-#pragma region 배열
-	// 같은 자료형의 변수들로 이루어진 유한 집합입니다.
+#pragma region 범용(void) 포인터
+	// 자료형이 정해지지 않은 상태로 모든
+	// 자료형을 저장할 수 있는 포인터입니다.
 
-	int buffer[5] = { 0, };
+	// int (4 byte)
+	// int data = 100;
 
-	// 배열은 원하는 원소에 원하는 값을 저장할 수 있으며,
-	// 배열의 크기는 컴파일이 되는 시점부터 
-	// 고정된 메모리 공간을 가지게 됩니다.
-	// buffer[0] = 100;
+	// float (4 byte)
+	// float pi = 3.141592f;
 
-	// buffer[2] = 400;
+	// void* ptr = &data;
 
-	// 배열의 경우 첫 번째 원소는 0부터 시작합니다.
-
-	// printf("%d\n\n", *(buffer + 1));
-
-	// printf("%d\n\n", *(buffer + 2));
-
-	// for (int i = 0; i < 5; i++)
-	// {
-	// 	printf("buffer의 %d번 째 index는 : %d\n", i, buffer[i]);
-	// }
-
-	// 배열의 크기는 생략할 수 있으며, 초기화 목록에서 설정한
-	// 요소에 따라 배열의 크기가 결정됩니다.
-	float dataList[] = { 1.11f, 2.22f, 3.33f };
-
-	// 배열은 연속적인 메모리 공간을 가지며, 배열의 이름은
-	// 배열의 시작 주소를 가르킵니다.
-	// printf("\ndataList의 주소 : %p\n", dataList);
-	// printf("dataList의 주소 : %p\n", &dataList[0]);
-
-	// 포인터 연산
-	// float* floatPtr = dataList;
-	// 
-	// printf("floatPtr이 가리키는 주소 : %p\n", floatPtr);
-	// printf("floatPtr이 가리키는 값 : %f\n\n", *(floatPtr + 0));
-	// 
-	// floatPtr += 1;
-	// 
-	// printf("floatPtr이 가리키는 주소 : %p\n", floatPtr);
-	// printf("floatPtr이 가리키는 값 : %f\n", *(floatPtr));
-
-	// 배열의 크기를 벗어나서 데이터를 저장할 수 없습니다.
-	// ex) dataList[4] = 36.1f; ERROR
-
-#pragma endregion
-
-#pragma region 문자열
-	// 연속적인 메모리 공간에 저장된 
-	// 문자 변수의 집합입니다.
-
-	// 문자열의 경우 포인터를 이용하여 문자열 상수를
-	// 가리키도록 할 수 있으며, 문자열 상수는 데이터
-	// 영역을 읽기 전용 공간에 할당되기 때문에 문자열의
+	// 범용 포인터는 메모리 주소에 접근해서
 	// 값을 변경할 수 없습니다.
+	// *ptr = 10; ERROR
 
-	const char* character = "Demian";
+	// *(int*)ptr = 9999;
 
-	// 문자열은 공백도 함께 메모리 공간에 포함하여 크기가
-	// 결정되며, 마지막에 문자열의 끝을 알려주는 제어 문자가 추가됩니다.
-	character = "Kazuya Mishima";
+	// printf("ptr이 가리키는 값 : %d\n\n", *(int*)ptr);
+	// printf("data의 값 : %d\n\n\n", data);
 
-	// 문자열의 경우 문자 배열 사이에 무효의 문자를 넣게 되묜
-	// 무효의 문자까지만 문자열을 출력합니다.
+	// ptr = &pi;
 
-	printf("character의 값: %s\n", character);
-	printf("character의 값: %c\n", *(character + 1));
-
+	// printf("ptr이 가리키는 값 : %f\n\n", *(float*)ptr);
+	// printf("pi의 값 : %f\n", pi);
 
 #pragma endregion
 
+#pragma region 함수
+	// 하나의 특별한 목적의 작업을 수행화기
+	// 위해 독립적으로 설계된 코드의 집합입니다.
 
+	// 함수의 호출
+	// for (int i = 0; i < 5; i++)
+	// 	Function();
+
+	// printf("%c\n", CharFunction());
+
+#pragma endregion
+
+#pragma region 인수
+	// 함수가 호출될 때 매개 변수에 실제로
+	// 전달되는 값입니다.
+
+	// int value = 100;
+	// Calculator(value);
+	// printf("value의 값 : %d\n", value);
+
+	// 값 바꾸기
+	int a = 10;
+	int b = 20;
+
+	// int temp = 0;
+
+	// temp = a;
+	// a = b;
+	// b = temp;
+
+	Swap(&a, &b);
+
+	printf("a의 값 : %d, b의 값 : %d\n", a, b);
+
+#pragma endregion
 
 }
