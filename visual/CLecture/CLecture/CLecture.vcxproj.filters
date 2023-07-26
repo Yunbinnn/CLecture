@@ -47,5 +47,8 @@
     <ClInclude Include="(2023.07.24) 배열.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="(2023.07.25) 함수.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -139,6 +139,7 @@
     <ClInclude Include="(2023.07.20) 포인터.h" />
     <ClInclude Include="(2023.07.21) 포인터 상수화.h" />
     <ClInclude Include="(2023.07.24) 배열.h" />
+    <ClInclude Include="(2023.07.25) 함수.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
