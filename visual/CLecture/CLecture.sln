@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CLecture", "CLecture\CLecture.vcxproj", "{CB5F54DB-73FE-4CFF-8CAB-8DEB6EF891EE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mapeditor", "Mapeditor\Mapeditor.vcxproj", "{97E4AE74-B77A-492E-ABEF-8AE38A30C1D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{CB5F54DB-73FE-4CFF-8CAB-8DEB6EF891EE}.Release|x64.Build.0 = Release|x64
 		{CB5F54DB-73FE-4CFF-8CAB-8DEB6EF891EE}.Release|x86.ActiveCfg = Release|Win32
 		{CB5F54DB-73FE-4CFF-8CAB-8DEB6EF891EE}.Release|x86.Build.0 = Release|Win32
+		{97E4AE74-B77A-492E-ABEF-8AE38A30C1D2}.Debug|x64.ActiveCfg = Debug|x64
+		{97E4AE74-B77A-492E-ABEF-8AE38A30C1D2}.Debug|x64.Build.0 = Debug|x64
+		{97E4AE74-B77A-492E-ABEF-8AE38A30C1D2}.Debug|x86.ActiveCfg = Debug|Win32
+		{97E4AE74-B77A-492E-ABEF-8AE38A30C1D2}.Debug|x86.Build.0 = Debug|Win32
+		{97E4AE74-B77A-492E-ABEF-8AE38A30C1D2}.Release|x64.ActiveCfg = Release|x64
+		{97E4AE74-B77A-492E-ABEF-8AE38A30C1D2}.Release|x64.Build.0 = Release|x64
+		{97E4AE74-B77A-492E-ABEF-8AE38A30C1D2}.Release|x86.ActiveCfg = Release|Win32
+		{97E4AE74-B77A-492E-ABEF-8AE38A30C1D2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

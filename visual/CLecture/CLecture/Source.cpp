@@ -1,79 +1,70 @@
 #include <stdio.h>
 
-#pragma region 재귀 함수
-// 어떤 함수에서 자신을 다시 호출하여
-// 작업을 수행하는 함수입니다.
+#pragma region 인라인 함수
+	// 함수를 호출하는 대신 함수가 호출되는 위치마다
+	// 함수의 코드를 복사하여 전달하는 방식의 함수입니다.
 
-void Function()
+inline void Information()
 {
-	// 재귀 함수는 함수를 계속 호출하기 때문에
-	// 스택 영역에 메모리가 계속 쌓이게 되므로
-	// 스택 오버플로우가 발생합니다.
-	printf("함수호출\n");
-	Function();
+	int health = 100;
+	const char* name = "Slime";
+
+	printf("health의 체력 : %d\n", health);
+	printf("이름 : %s\n", name);
 }
 
 #pragma endregion
 
-void CountDown(int count)
-{
-	// 방어 코드
-	if (count <= 0)
-		return;
-
-	printf("count의 값 : %d\n", count);
-
-	CountDown(count - 1);
-}
-
-// 팩토리얼
-int Factorial(int a)
-{
-	if (a <= 0)
-		return 0;
-
-	int facValue = 1;
-	
-	for (int i = 1; i <= a; i++)
-	{
-		facValue *= i;
-	}
-
-	return facValue;
-}
-
-int NewFac(int count)
-{
-	if (count <= 1)
-	{
-		return 1;
-	}
-	else
-	{
-		return count * Factorial(count - 1);
-	}
-}
-
-// !5(120) !4(24) !3(6)
-// 3! = 1 * 2 * 3
-// 4! = 1 * 2 * 3 * 4 
 
 int main()
 {
-	// CountDown(3);
+#pragma region 인라인 함수
+	// 인라인 함수는 함수를 호출하는 과정이 없으므로 처리속도가
+	// 빠르지만, 인라인 함수를 많이 사용하게 되면 함수의 코드가
+	// 복사되기 때문에 실행파일의 크기가 커지게 됩니다.
+	// 
+	// Information();
 
-	int data = 10;
+	// 인라인 함수의 경우 컴파일 시점에 확정되며, 컴파일 시 인라인
+	// 함수로 선언하더라도 상황에 따라 일반 함수로 변환되기도 합니다.
+
+#pragma endregion
+
+#pragma region 정수의 승격
+	// 일반적으로 CPU가 처리하기에 가장 적합한
+	// 크기의 정수 자료형은 int 이므로, int형 보다
+	// 작은 자료형은 int 자료형으로 변환하는 것입니다.
+
+	// char a = 10;  // 1 byte
+	// short b = 20; // 2 byte
+	 
+	// printf("a 변수와 b 변수를 더한 메모리 크기 : %d", sizeof(a + b));
+
+#pragma endregion
+
+#pragma region 부호없는 자료형
 	
-	int* ptr = &data;
+	// char alphabet = 128; // -128 ~ 127
+	// unsigned char unAlphabet = 255; // 0 ~ 255
+	 
+	// printf("alphabet 변수의 값 : %d\n", alphabet);
+	// printf("unAlphabet 변수의 값 : %u\n", unAlphabet);
 
-	// 빅 엔디안 방식
-	// 네트워크 <- 통일
+	// char a = -5;
+	// unsigned char b = -5;
+	 
+	// int data1 = a; // 4 byte [1111 1111][1111 1111][1111 1111][1111 1011] <- 1 byte
+	// int data2 = b; // 4 byte [0000 0000][0000 0000][0000 0000][1111 1011] <- 1 byte
+	 
+	// printf("data1 : %d data2 : %d\n\n", data1, data2);
+	// printf("data1 : %u data2 : %u\n", (int)a, data2);
 
-	// 리틀 엔디안 방식
-	// 낮은 주소에 데이터의 낮은 바이트
-	// (LSB)부터 저장하는 방법입니다.
+	// unsigned -> "%u"
 
-	// 프로그램이 정상적으로 종료되었을 때
-	// 0이라는 값을 반환합니다.
+
+#pragma endregion
+
+
+
 	return 0;
 }
