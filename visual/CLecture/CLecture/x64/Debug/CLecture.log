@@ -1,2 +1,5 @@
 ﻿  Source.cpp
+C:\Users\A\Desktop\Github\CLecture\visual\CLecture\CLecture\Source.cpp(2,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+C:\Users\A\Desktop\Github\CLecture\visual\CLecture\CLecture\SoundManager.h(4,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+C:\Users\A\Desktop\Github\CLecture\visual\CLecture\CLecture\Source.cpp(3,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
   CLecture.vcxproj -> C:\Users\A\Desktop\Github\CLecture\visual\CLecture\x64\Debug\CLecture.exe

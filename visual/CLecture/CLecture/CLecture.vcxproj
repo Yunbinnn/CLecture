@@ -141,6 +141,10 @@
     <ClInclude Include="(2023.07.24) 배열.h" />
     <ClInclude Include="(2023.07.25) 함수.h" />
     <ClInclude Include="(2023.07.26) 재귀 함수.h" />
+    <ClInclude Include="(2023.07.27) 인라인 함수.h" />
+    <ClInclude Include="(2023.07.28) 변수의 범위.h" />
+    <ClInclude Include="ControlSound.h" />
+    <ClInclude Include="SoundManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
