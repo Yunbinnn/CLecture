@@ -1,138 +1,65 @@
 #include <stdio.h>
-#include <limits.h>
-
-#pragma region 열거형
-// 명명된 정수형 상수의 집합입니다.
-
-enum State
-{
-	IDLE,
-	ATTACK,
-	DIE,
-
-	// enum에 설정된 값을 변경할 수 있으며, 중간에 값을
-	// 변경했을 때 그 다음으로 설정된 값은 변경한 이후의
-	// 값의 +1만큼 더하여 저장됩니다.
-};
-
-#pragma endregion
 
 int main()
 {
-#pragma region 열거형
-
-	// enum State stat;
+#pragma region 이중 포인터
 
 	/*
-	stat = IDLE;
-	printf("State의 IDLE 값 : %d\n", stat);
+	 int data = 100;
+	 int* ptr1 = &data;   // 8 byte, 1차원 ex) 00AABB00 ~ 07
+	 int** ptr2 = &ptr1;  // 8 byte, 2차원
 
-	stat = ATTACK;
-	printf("State의 ATTACK 값 : %d\n", stat);
+	 **ptr2 = 999;
 
-	stat = DIE;
-	printf("State의 DIE 값 : %d\n", stat);
+	 printf("data의 값 : %d\n", data);
+	 printf("**ptr2의 값 : %d\n", **ptr2);
 	*/
 
 	/*
-	scanf_s("%d", &stat);
+	 int a = 10, b = 20;
 
-	switch (stat)
-	{
-	case IDLE:printf("대기 중 . . .\n");
-		break;
-	case ATTACK:printf("공격 중 . . .\n");
-		break;
-	case DIE: printf("사망 . . .\n");
-		break;
-	default:
-		break;
-	}
+	 int* aPtr1 = &a;
+	 int* bPtr1 = &b;
+
+	 int** aPtr2 = &aPtr1;
+	 int** bPtr2 = &bPtr1;
+
+	 **aPtr2 = 100;
+	 **bPtr2 = 200;
+
+	 int* temp = *aPtr2;
+
+	 *aPtr2 = *bPtr2;
+	 *bPtr2 = temp;
+
+	 printf("**aPtr2가 가리키는 값 : %d\n", **aPtr2);
+	 printf("**bPtr2가 가리키는 값 : %d\n", **bPtr2);
 	*/
 
 #pragma endregion
 
-#pragma region 별
-
-	// int i, j;
+#pragma region 약수
 
 	/*
-	for (i = 0; i < 5; i++)
+	int input;
+	int count = 0;
+
+	printf("정수를 입력하세요 : ");
+
+	scanf_s("%d", &input);
+
+	printf("\n");
+
+	for (int i = 1; i <= input; i++)
 	{
-		for (j = 0; j < 5; j++)
+		if (input % i == 0)
 		{
-			if (i < j)
-				printf(" ");
-			else
-				printf("*");
+			printf("%d ", i);
+			count++;
 		}
-		printf("\n");
 	}
-	*/
 
-#pragma endregion
-
-#pragma region 1~10 까지의 합
-
-	// int i = 0, j = 0, sum = 0;
-
-	/*
-	for (i = 1; i <= 10; i++)
-	{
-		sum += i;
-	}
-	*/
-
-	/*
-	while (i <= 10)
-	{
-		sum += i;
-		i += 1;
-	}
-	*/
-
-	// printf("1에서 10까지의 합 : %d\n", sum);
-
-#pragma endregion
-
-#pragma region ASCII 코드
-	// 1936년 미국 ANSI에서 표준화한 정보교환용 7비트 부호체계이다.
-	// 128개의 숫자, 문자, 특수문자, 제어문자가 표현됩니다.
-
-	// char alphabet = '김';
-	//  
-	// printf("alphabet 변수의 ASCII 코드의 값 : %c\n", alphabet);
-	// printf("alphabet 변수의 값 : %d\n", alphabet);
-
-	// A to Z
-	//  for (int i = 0; i < 26; i++)
-	//  {
-	//  	printf("%c ", 'A' + i);
-	//  }
-
-#pragma endregion
-
-#pragma region 최솟값과 최댓값
-
-	// [10] [5] [11] [1] [3]
-	
-	/*
-	int value[5] = { 17,58,10,4,21 };
-
-	int max = 0;
-	int min = INT_MAX;
-
-	for (int i = 0; i < 5; i++)
-	{
-		if (value[i] > max)
-			max = value[i];
-
-		if (value[i] < min)
-			min = value[i];
-	}	
-
-	printf("value 배열의 최솟값 : %d\n", min);
-	printf("value 배열의 최댓값 : %d\n", max);
+	printf("\n\n%d의 약수의 개수 : %d개\n", input, count);
 	*/
 #pragma endregion
 
