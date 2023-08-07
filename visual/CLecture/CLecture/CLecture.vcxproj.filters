@@ -80,5 +80,8 @@
     <ClInclude Include="(2023.08.03) ASCII 코드.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="(2023.08.04) 이중 포인터.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
